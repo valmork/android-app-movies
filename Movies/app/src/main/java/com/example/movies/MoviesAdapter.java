@@ -2,6 +2,7 @@ package com.example.movies;
 
 // адаптер нужен для RecyclerView чтобы отображать элементы на экране
 
+import android.graphics.drawable.Drawable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -43,10 +45,28 @@ public class MoviesAdapter extends RecyclerView.Adapter<MoviesAdapter.MovieViewH
     public void onBindViewHolder(@NonNull MovieViewHolder holder, int position) {
         Movie movie = movies.get(position);
         // необходимо установить картинку в ImageView, делаем это при помощи Glide
-        Glide.with(holder.itemView)
-                .load(movie.getPoster().getUrl())
-                .into(holder.imageViewPoster);
-        holder.textViewRating.setText(movie.getRating().getKp().substring(0,3));
+        if(movie.getPoster()!=null) {
+            Glide.with(holder.itemView)
+                    .load(movie.getPoster().getUrl())
+                    .into(holder.imageViewPoster);
+        } else if (movie.getPoster() == null) {
+            Glide.with(holder.itemView)
+                    .load("https://st.kp.yandex.net/images/no-poster.gif")
+                    .into(holder.imageViewPoster);
+        }
+
+        double rating = movie.getRating().getKp();
+        int backgroundId;
+        if (rating > 7){
+            backgroundId = R.drawable.circle_green;
+        } else if (rating > 5) {
+            backgroundId = R.drawable.circle_orange;
+        } else {
+            backgroundId = R.drawable.circle_red;
+        }
+        Drawable background = ContextCompat.getDrawable(holder.itemView.getContext(), backgroundId);
+        holder.textViewRating.setBackground(background);
+        holder.textViewRating.setText(String.valueOf(rating).substring(0,3));
 
     }
 
