@@ -42,13 +42,13 @@
 ## Скриншоты
 
 ### Главный экран (список фильмов)
-![Start screen](screenshots/start_screen.png)
+![Start screen](screenshots/start_screen_edited.png)
 
 ### Экран с постером
-![Poster screen](screenshots/poster_screen.png)
+![Poster screen](screenshots/poster_screen_edited.png)
 
 ### Экран с деталями
-![Details screen](screenshots/details_screen.png)
+![Details screen](screenshots/details_screen_edited.png)
 
 
 ---
