@@ -42,7 +42,7 @@
 ## Скриншоты
 
 ### Главный экран (список фильмов)
-![Start screen](screenshots/start_screen_edited.png)
+![Start screen](screenshots/start_screen_new.png)
 
 ### Экран с постером
 ![Poster screen](screenshots/poster_screen_edited.png)
