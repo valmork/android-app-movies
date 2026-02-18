@@ -62,6 +62,7 @@
 - Парсинг JSON: Gson / Moshi
 - Система сборки: Gradle
 - UI: XML layouts
+- API - Kinopoisk
 
 ---
 
