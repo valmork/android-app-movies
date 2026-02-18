@@ -45,10 +45,10 @@
 ![Start screen](screenshots/start_screen_new.png)
 
 ### Экран с постером
-![Poster screen](screenshots/poster_screen_edited.png)
+![Poster screen](screenshots/poster_screen_new.png)
 
 ### Экран с деталями
-![Details screen](screenshots/details_screen_edited.png)
+![Details screen](screenshots/details_screen_new.png)
 
 
 ---
